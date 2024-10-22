@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Financial App - Summary</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Summary of Your Financial Data</h1>
+    <p><strong>Income:</strong> <span id="income"></span></p>
+    <p><strong>Expense:</strong> <span id="expense"></span></p>
+    <p><strong>Category:</strong> <span id="category"></span></p>
+    <a href="form.html">Go Back to Tracker</a>
+    <a href="index.html">Back to Home</a>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const income = urlParams.get('income');
+        const expense = urlParams.get('expense');
+        const category = urlParams.get('category');
+
+        // Display the values on the summary page
+        document.getElementById('income').textContent = income;
+        document.getElementById('expense').textContent = expense;
+        document.getElementById('category').textContent = category;
+    </script>
+</body>
+</html>
